@@ -1,0 +1,47 @@
+<template>
+  <div class="q-pa-md items-start">
+    <q-card id="page3-1" flat bordered class="my-card q-mt-md">
+      <q-card-section>
+        <h3 class="text-h6 q-mb-none">3-1) alt 제공</h3>
+      </q-card-section>
+
+      <q-img src="https://cdn.quasar.dev/img/mountains.jpg" :ratio="16 / 9" fit="contain">
+        <div class="absolute-top bg-primary">준수 사례</div>
+      </q-img>
+
+      <q-card-section> alt에는 적절한 대체 텍스트를 제공한다. </q-card-section>
+    </q-card>
+
+    <q-card id="page3-2" flat bordered class="my-card q-mt-md">
+      <q-card-section>
+        <h3 class="text-h6 q-mb-none">3-1) IR 기법</h3>
+      </q-card-section>
+      <q-img src="https://cdn.quasar.dev/img/mountains.jpg" :ratio="16 / 9" fit="contain">
+        <div class="absolute-top bg-negative">오류 사례</div>
+      </q-img>
+      <q-card-section
+        >특수문자, 기호 포함, 조직도, 차트 등 복잡한 콘텐츠의 경우 숨김 처리로
+        대체 텍스트를 제공한다.
+      </q-card-section>
+    </q-card>
+  </div>
+</template>
+
+<script>
+import { useStore } from 'vuex';
+
+export default {
+  mounted() {
+    const store = useStore();
+    //sideMenu 설정하는 부분, id값으로 스크롤 이동됨
+    const sideMenuItems = [
+      { label: "8.키보드 사용 보장", id: "page3-1" },
+      { label: "9.초점 이동", id: "page3-2" },
+      { label: "10.조작 가능", id: "page3-3" },
+      { label: "11.응답 시간 조절", id: "page3-4" },
+      { label: "12.정지 기능 제공", id: "page3-5" },
+    ];
+    store.commit("setSideMenuItems", sideMenuItems);
+  }
+}
+</script>
