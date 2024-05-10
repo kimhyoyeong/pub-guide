@@ -1,8 +1,4 @@
 import { createStore } from "vuex";
-import { useRoute } from 'vue-router';
-
-// 현재 경로를 가져옵니다.
-const route = useRoute();
 
 const store = createStore({
   state() {
@@ -11,6 +7,7 @@ const store = createStore({
       leftDrawerOpen: true,
       // 활성 페이지의 인덱스
       activeIndex: 0,
+      currentPage: "/",
       // 페이지 객체의 배열
       pages: [
         {
@@ -49,19 +46,16 @@ const store = createStore({
     setSideMenuItems(state, sideMenuItems) {
       //현재 경로에 해당하는 페이지를 찾음
       const currentPage = state.pages.find(
-        (page) => page.path === window.location.pathname
+        (page) => page.path === state.currentPage
       );
-
-     // console.log(currentPage)
       //사이드 메뉴 업데이트
       if (currentPage) {
         currentPage.sideMenuItems = sideMenuItems;
       }
-      console.log(state.pages, window.location.pathname);
-
-     // console.log(currentPage)
-
     },
+    setCurrentPage(state, page){
+      state.currentPage = page;
+    }
   },
   actions: {
     // 쿼리 매개변수에 기반하여 활성 인덱스를 설정하는 액션

@@ -59,7 +59,7 @@ watch(
       // 페이지 라우터의 queryActiveIndex 값이 존재하면 정수로 변환하여 전달, 그렇지 않으면 기본값 0 전달
       queryActiveIndex ? parseInt(queryActiveIndex) : 0
     );
-  }
+  },
 );
 
 // 현재 페이지에 해당하는 메뉴 아이템들을 반환하는 computed 속성
@@ -70,6 +70,8 @@ const filteredMenuItems = computed(() => {
     (item) => item.path === router.currentRoute.value.path
   );
   // 만약 현재 페이지의 정보가 존재한다면 해당 페이지의 sideMenuItems를 반환하고, 그렇지 않으면 빈 배열을 반환
+  store.commit("setCurrentPage", router.currentRoute.value.path);
+  console.log(store.state.currentPage)
   return currentPageItem?.sideMenuItems || [];
 });
 
