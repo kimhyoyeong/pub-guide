@@ -87,12 +87,7 @@ export default {
     const store = useStore();
     //sideMenu 설정하는 부분, id값으로 스크롤 이동됨
     const sideMenuItems = [
-      { label: "1. 적절한 대체 텍스트 제공", id: "page1-1" },
-      { label: "2.자막제공", id: "page1-2" },
-      { label: "3.색에 무관한 콘텐츠 인식", id: "page1-3" },
-      { label: "4.명확한 지시 사항 제공", id: "page1-4" },
-      { label: "5.텍스트 콘텐츠의 명도 대비", id: "page1-5" },
-      { label: "6.배경음 사용 금지", id: "page1-6" },
+
     ];
     store.commit("setSideMenuItems", sideMenuItems);
   },

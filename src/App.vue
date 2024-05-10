@@ -70,7 +70,7 @@ const filteredMenuItems = computed(() => {
     (item) => item.path === router.currentRoute.value.path
   );
   // 만약 현재 페이지의 정보가 존재한다면 해당 페이지의 sideMenuItems를 반환하고, 그렇지 않으면 빈 배열을 반환
-  return currentPageItem?.sideMenuItems ?? [];
+  return currentPageItem?.sideMenuItems || [];
 });
 
 // 사이드 메뉴 열기/닫기 토글 함수
