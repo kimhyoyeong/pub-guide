@@ -1,4 +1,8 @@
 import { createStore } from "vuex";
+import { useRoute } from 'vue-router';
+
+// 현재 경로를 가져옵니다.
+const route = useRoute();
 
 const store = createStore({
   state() {
@@ -47,12 +51,15 @@ const store = createStore({
       const currentPage = state.pages.find(
         (page) => page.path === window.location.pathname
       );
-      console.log(currentPage)
+
+     // console.log(currentPage)
       //사이드 메뉴 업데이트
       if (currentPage) {
         currentPage.sideMenuItems = sideMenuItems;
       }
-      console.log(currentPage)
+      console.log(state.pages, window.location.pathname);
+
+     // console.log(currentPage)
 
     },
   },
