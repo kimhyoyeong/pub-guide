@@ -57,7 +57,7 @@ const store = createStore({
       state.currentPage = page;
     }
   },
-  actions: {
+  /* actions: {
     // 쿼리 매개변수에 기반하여 활성 인덱스를 설정하는 액션
     setQueryActiveIndex({ commit }, queryActiveIndex) {
       // 쿼리 매개변수를 정수로 파싱
@@ -65,7 +65,7 @@ const store = createStore({
       // 파싱된 인덱스로 setActiveIndex 뮤테이션을 호출
       commit("setActiveIndex", index);
     },
-  },
+  }, */
 });
 
 export default store;
