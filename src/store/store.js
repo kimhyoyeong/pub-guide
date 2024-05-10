@@ -47,10 +47,13 @@ const store = createStore({
       const currentPage = state.pages.find(
         (page) => page.path === window.location.pathname
       );
+      console.log(currentPage)
       //사이드 메뉴 업데이트
       if (currentPage) {
         currentPage.sideMenuItems = sideMenuItems;
       }
+      console.log(currentPage)
+
     },
   },
   actions: {
