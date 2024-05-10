@@ -31,7 +31,6 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
@@ -63,6 +62,8 @@ function scrollToMenuItem(item, index) {
 </script>
 
 <script>
+import { defineProps } from "vue";
+
 export default {
   name: "SideMenu",
 };
