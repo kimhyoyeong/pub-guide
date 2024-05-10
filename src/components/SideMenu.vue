@@ -22,7 +22,7 @@
         <!-- 로고 -->
         <q-item class="justify-center">
           <q-avatar>
-            <img src="../assets/signon.svg" alt="CONCENTRIX" />
+            <img src="@/assets/signon.svg" alt="CONCENTRIX" />
           </q-avatar>
         </q-item>
       </q-list>

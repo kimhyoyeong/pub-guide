@@ -2,7 +2,7 @@
   <div class="q-pa-md items-start">
     <q-card flat bordered class="my-card q-mt-md q-pa-md">
       <div class="column items-center">
-        <img src="../assets/signon.svg" alt="CONCENTRIX" style="width: 300px" />
+        <img src="@/assets/signon.svg" alt="CONCENTRIX" style="width: 300px" />
         <div class="text-h2 q-pb-md">콘센트릭스 웹접근성 가이드</div>
       </div>
     </q-card>
