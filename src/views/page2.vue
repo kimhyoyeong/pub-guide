@@ -27,21 +27,19 @@
   </div>
 </template>
 
-<script>
-import { useStore } from 'vuex';
 
-export default {
-  mounted() {
-    const store = useStore();
-    //sideMenu 설정하는 부분, id값으로 스크롤 이동됨
-    const sideMenuItems = [
+<script setup>
+import { useStore } from "vuex";
+
+const store = useStore();
+
+const sideMenuItems = [
       { label: "8.키보드 사용 보장", id: "page2-1" },
       { label: "9.초점 이동", id: "page2-2" },
       { label: "10.조작 가능", id: "page2-3" },
       { label: "11.응답 시간 조절", id: "page2-4" },
       { label: "12.정지 기능 제공", id: "page2-5" },
     ];
-    store.commit("setSideMenuItems", sideMenuItems);
-  }
-}
+
+store.commit("setSideMenuItems", sideMenuItems);
 </script>

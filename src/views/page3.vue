@@ -5,7 +5,11 @@
         <h3 class="text-h6 q-mb-none">3-1) alt 제공</h3>
       </q-card-section>
 
-      <q-img src="https://cdn.quasar.dev/img/mountains.jpg" :ratio="16 / 9" fit="contain">
+      <q-img
+        src="https://cdn.quasar.dev/img/mountains.jpg"
+        :ratio="16 / 9"
+        fit="contain"
+      >
         <div class="absolute-top bg-primary">준수 사례</div>
       </q-img>
 
@@ -16,7 +20,11 @@
       <q-card-section>
         <h3 class="text-h6 q-mb-none">3-1) IR 기법</h3>
       </q-card-section>
-      <q-img src="https://cdn.quasar.dev/img/mountains.jpg" :ratio="16 / 9" fit="contain">
+      <q-img
+        src="https://cdn.quasar.dev/img/mountains.jpg"
+        :ratio="16 / 9"
+        fit="contain"
+      >
         <div class="absolute-top bg-negative">오류 사례</div>
       </q-img>
       <q-card-section
@@ -27,21 +35,18 @@
   </div>
 </template>
 
-<script>
-import { useStore } from 'vuex';
+<script setup>
+import { useStore } from "vuex";
 
-export default {
-  mounted() {
-    const store = useStore();
-    //sideMenu 설정하는 부분, id값으로 스크롤 이동됨
-    const sideMenuItems = [
-      { label: "8.키보드 사용 보장", id: "page3-1" },
-      { label: "9.초점 이동", id: "page3-2" },
-      { label: "10.조작 가능", id: "page3-3" },
-      { label: "11.응답 시간 조절", id: "page3-4" },
-      { label: "12.정지 기능 제공", id: "page3-5" },
-    ];
-    store.commit("setSideMenuItems", sideMenuItems);
-  }
-}
+const store = useStore();
+
+const sideMenuItems = [
+  { label: "8.키보드 사용 보장", id: "page3-1" },
+  { label: "9.초점 이동", id: "page3-2" },
+  { label: "10.조작 가능", id: "page3-3" },
+  { label: "11.응답 시간 조절", id: "page3-4" },
+  { label: "12.정지 기능 제공", id: "page3-5" },
+];
+
+store.commit("setSideMenuItems", sideMenuItems);
 </script>

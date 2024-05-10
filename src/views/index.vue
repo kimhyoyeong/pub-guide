@@ -23,9 +23,7 @@
             1차 심사 결과서 전체 검토 및 담당자 분류 하여 CTTD & 개발팀에 수정
             가이드 전달
           </li>
-          <li>
-            최종 합격 하여 인증서 취득 후 푸터의 인증 마크 교체 작업 진행
-          </li>
+          <li>최종 합격 하여 인증서 취득 후 푸터의 인증 마크 교체 작업 진행</li>
         </ul>
       </q-card-section>
 
@@ -72,19 +70,16 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { useStore } from "vuex";
 
-export default {
-  mounted() {
-    const store = useStore();
-    //sideMenu 설정하는 부분, id값으로 스크롤 이동됨
-    const sideMenuItems = [
-      { label: "인증 프로세스", id: "index1-1" },
-      { label: "참고 문서", id: "index1-2" },
-      { label: "자가진단 도구", id: "index1-3" },
-    ];
-    store.commit("setSideMenuItems", sideMenuItems);
-  },
-};
+const store = useStore();
+
+const sideMenuItems = [
+  { label: "인증 프로세스", id: "index1-1" },
+  { label: "참고 문서", id: "index1-2" },
+  { label: "자가진단 도구", id: "index1-3" },
+];
+
+store.commit("setSideMenuItems", sideMenuItems);
 </script>
