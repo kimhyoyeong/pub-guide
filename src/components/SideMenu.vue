@@ -1,5 +1,5 @@
 <template>
-  <q-drawer persistent bordered class="bg-grey-1" :width="240">
+  <q-drawer show-if-above bordered class="bg-grey-1" :width="240">
     <q-scroll-area class="fit">
       <q-list padding>
         <!-- 메뉴 아이템 목록을 동적으로 생성 -->

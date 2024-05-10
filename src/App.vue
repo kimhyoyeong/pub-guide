@@ -23,7 +23,7 @@
 
     <!-- SideMenu 컴포넌트에 현재 페이지 정보 전달 -->
     <SideMenu
-      v-model="isDrawerOpen"
+      v-model="store.state.leftDrawerOpen"
       :menuItems="filteredMenuItems"
       :activeIndex="activeIndex"
     />
@@ -34,7 +34,7 @@
   </q-layout>
 </template>
 <script setup>
-import { computed, watch, onMounted } from "vue";
+import { computed, watch } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import SideMenu from "@/components/SideMenu.vue";
@@ -44,7 +44,6 @@ const store = useStore();
 // 전체 페이지 및 메뉴 아이템
 const pages = computed(() => store.state.pages);
 const activeIndex = computed(() => store.state.activeIndex);
-const isDrawerOpen = computed(() => store.state.leftDrawerOpen);
 
 // 페이지 라우터의 쿼리 파라미터에서 activeIndex 값을 감시하고, 변경 사항을 반영하는 watch 함수
 watch(
@@ -59,13 +58,8 @@ watch(
       // 페이지 라우터의 queryActiveIndex 값이 존재하면 정수로 변환하여 전달, 그렇지 않으면 기본값 0 전달
       queryActiveIndex ? parseInt(queryActiveIndex) : 0
     );
-  },
+  }
 );
-
-onMounted(() => {
-  // 컴포넌트가 마운트된 후 실행될 로직을 작성합니다.
-  console.log('컴포넌트가 마운트되었습니다.');
-});
 
 // 현재 페이지에 해당하는 메뉴 아이템들을 반환하는 computed 속성
 const filteredMenuItems = computed(() => {
@@ -86,7 +80,7 @@ function toggleLeftDrawer() {
 
 //탭 메뉴 변경시 상단으로 스크롤
 function pageScrollTop() {
-  window.scrollTo(0, 0);store.commit("closeLeftDrawer");
+  window.scrollTo(0, 0);
 }
 </script>
 <style lang="scss">
@@ -170,7 +164,7 @@ aside.q-drawer {
 body.q-body--prevent-scroll {
   position: relative !important;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .q-header {
     text-align: center;
     .q-btn {
@@ -180,5 +174,5 @@ body.q-body--prevent-scroll {
   .q-drawer-container{
     display: none;
   }
-}
+} */
 </style>
