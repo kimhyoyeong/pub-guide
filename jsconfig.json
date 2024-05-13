@@ -6,7 +6,6 @@
     "moduleResolution": "node",
     "paths": {
       "@src/*": ["src/*"],
-     //"images/*": ["public/images/*"],
     },
     "lib": [
       "esnext",
