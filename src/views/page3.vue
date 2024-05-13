@@ -6,7 +6,7 @@
       </q-card-section>
 
       <q-img
-        src="../images/@test.png"
+        src="images/@test.png"
         :ratio="16 / 9"
         fit="contain"
       >
@@ -21,7 +21,7 @@
         <h3 class="text-h6 q-mb-none">3-1) IR 기법</h3>
       </q-card-section>
       <q-img
-        src="../images/@test.png"
+        src="images/@test.png"
         :ratio="16 / 9"
         fit="contain"
       >

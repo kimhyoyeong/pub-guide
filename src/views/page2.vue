@@ -5,7 +5,7 @@
         <h3 class="text-h6 q-mb-none">2-1) alt 제공</h3>
       </q-card-section>
 
-      <q-img src="../images/@test.png" :ratio="16 / 9" fit="contain">
+      <q-img src="images/@test.png" :ratio="16 / 9" fit="contain">
         <div class="absolute-top bg-primary">준수 사례</div>
       </q-img>
 
@@ -16,7 +16,7 @@
       <q-card-section>
         <h3 class="text-h6 q-mb-none">2-2) IR 기법</h3>
       </q-card-section>
-      <q-img src="../images/@test.png" :ratio="16 / 9" fit="contain">
+      <q-img src="images/@test.png" :ratio="16 / 9" fit="contain">
         <div class="absolute-top bg-negative">오류 사례</div>
       </q-img>
       <q-card-section

@@ -16,7 +16,7 @@
       <q-card-section>
         <h3 class="text-h6 q-mb-none">2) IR 기법</h3>
       </q-card-section>
-      <q-img src="../images/@test.png" :ratio="16 / 9" fit="contain">
+      <q-img src="images/@test.png" :ratio="16 / 9" fit="contain">
         <div class="absolute-top bg-negative">오류 사례</div>
       </q-img>
       <q-card-section
@@ -29,7 +29,7 @@
       <q-card-section>
         <h3 class="text-h6 q-mb-none">3) IR 기법</h3>
       </q-card-section>
-      <q-img src="../images/@test.png" :ratio="16 / 9" fit="contain">
+      <q-img src="images/@test.png" :ratio="16 / 9" fit="contain">
         <div class="absolute-top ">오류 사례</div>
       </q-img>
       <q-card-section
@@ -42,7 +42,7 @@
       <q-card-section>
         <h3 class="text-h6 q-mb-none">4) IR 기법</h3>
       </q-card-section>
-      <q-img src="../images/@test.png" :ratio="16 / 9" fit="contain">
+      <q-img src="images/@test.png" :ratio="16 / 9" fit="contain">
         <div class="absolute-top ">오류 사례</div>
       </q-img>
       <q-card-section
@@ -55,7 +55,7 @@
       <q-card-section>
         <h3 class="text-h6 q-mb-none">5) IR 기법</h3>
       </q-card-section>
-      <q-img src="../images/@test.png" :ratio="16 / 9" fit="contain">
+      <q-img src="images/@test.png" :ratio="16 / 9" fit="contain">
         <div class="absolute-top ">오류 사례</div>
       </q-img>
       <q-card-section
@@ -68,7 +68,7 @@
       <q-card-section>
         <h3 class="text-h6 q-mb-none">6) IR 기법</h3>
       </q-card-section>
-      <q-img src="../images/@test.png" :ratio="16 / 9" fit="contain">
+      <q-img src="images/@test.png" :ratio="16 / 9" fit="contain">
         <div class="absolute-top ">오류 사례</div>
       </q-img>
       <q-card-section
