@@ -5,7 +5,7 @@
         <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
         <q-toolbar-title
-          ><router-link to="/">웹접근성 가이드 v1</router-link></q-toolbar-title
+          ><router-link to="/">웹접근성 가이드 v1.0</router-link></q-toolbar-title
         >
       </q-toolbar>
 

@@ -27,6 +27,11 @@ const store = createStore({
           label: "이해의 용이성",
           sideMenuItems: [],
         },
+        {
+          path: "/page4",
+          label: "견고성",
+          sideMenuItems: [],
+        },
       ],
     };
   },

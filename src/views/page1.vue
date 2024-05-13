@@ -1,5 +1,6 @@
 <template>
   <div class="q-pa-md items-start">
+    <h2 class="text-h6 q-mb-none">인식의 용이성</h2>
     <q-card id="page1-1" flat bordered class="my-card q-mt-md">
       <q-card-section>
         <h3 class="text-h6 q-mb-none">1) alt 제공</h3>

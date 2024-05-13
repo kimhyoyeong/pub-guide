@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import store from "@/store/store.js";
 import Index from "@/views/index.vue";
 
 const routes = [
@@ -7,23 +8,12 @@ const routes = [
     name: "index",
     component: Index,
   },
-  {
-    path: "/page1",
-    name: "page1",
-    component: () => import("@/views/page1.vue"),
-  },
-  {
-    path: "/page2",
-    name: "page2",
-    component: () => import("@/views/page2.vue"),
-  },
-  {
-    path: "/page3",
-    name: "page3",
-    component: () => import("@/views/page3.vue"),
-  },
+  ...store.state.pages.slice(1).map(page => ({
+    path: page.path,
+    name: page.label,
+    component: () => import(`@/views${page.path}.vue`),
+  })),
 ];
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
