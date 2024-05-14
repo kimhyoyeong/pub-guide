@@ -1,37 +1,59 @@
 <template>
   <div class="q-pa-md items-start">
-    <q-card id="page3-1" flat bordered class="my-card q-mt-md">
+    <!-- title-link -->
+    <h2 id="content1" class="text-h5 q-py-lg q-mb-none">1. 가독성</h2>
+    <!-- //title-link -->
+    <!-- card -->
+    <q-card flat bordered class="my-card q-mb-lg">
       <q-card-section>
-        <h3 class="text-h6 q-mb-none">3-1) alt 제공</h3>
+        <h3 class="text-h6">1-1. 기본 언어 표시</h3>
+        <div class="absolute-right q-pa-xs">
+          <q-chip dense color="dark" text-color="white"
+            ><q-icon name="done" />퍼블</q-chip
+          >
+        </div>
+        <div class="text-subtitle q-mt-sm">
+          주로 사용하는 언어를 명시해야 한다.
+        </div>
       </q-card-section>
-
+      <q-separator />
       <q-img
         src="images/@test.png"
         :ratio="16 / 9"
         fit="contain"
+        class="bg-grey-2"
       >
-        <div class="absolute-top bg-primary">준수 사례</div>
+        <div class="absolute-top">준수 사례</div>
       </q-img>
-
-      <q-card-section> alt에는 적절한 대체 텍스트를 제공한다. </q-card-section>
-    </q-card>
-
-    <q-card id="page3-2" flat bordered class="my-card q-mt-md">
+      <q-separator />
       <q-card-section>
-        <h3 class="text-h6 q-mb-none">3-1) IR 기법</h3>
-      </q-card-section>
-      <q-img
-        src="images/@test.png"
-        :ratio="16 / 9"
-        fit="contain"
-      >
-        <div class="absolute-top bg-negative">오류 사례</div>
-      </q-img>
-      <q-card-section
-        >특수문자, 기호 포함, 조직도, 차트 등 복잡한 콘텐츠의 경우 숨김 처리로
-        대체 텍스트를 제공한다.
+        <q-chip
+          color="red"
+          text-color="white"
+          label="소스코드"
+          class="q-mb-sm"
+        />
+        <VCodeBlock
+          code="<a>텍스트</a>"
+          highlightjs
+          lang="html"
+          theme="panda-syntax-light"
+        />
+        <q-chip
+          color="primary"
+          text-color="white"
+          label="해결방안"
+          class="q-mb-sm"
+        />
+        <VCodeBlock
+          code='<a href="#">텍스트</a>'
+          highlightjs
+          lang="html"
+          theme="panda-syntax-light"
+        />
       </q-card-section>
     </q-card>
+    <!-- //card -->
   </div>
 </template>
 
@@ -41,11 +63,9 @@ import { useStore } from "vuex";
 const store = useStore();
 
 const sideMenuItems = [
-  { label: "8.키보드 사용 보장", id: "page3-1" },
-  { label: "9.초점 이동", id: "page3-2" },
-  { label: "10.조작 가능", id: "page3-3" },
-  { label: "11.응답 시간 조절", id: "page3-4" },
-  { label: "12.정지 기능 제공", id: "page3-5" },
+  { label: "가독성", id: "content1" },
+  { label: "예측 가능성", id: "content2" },
+  { label: "입력 도움", id: "content3" },
 ];
 
 store.commit("setSideMenuItems", sideMenuItems);

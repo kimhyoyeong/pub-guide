@@ -31,7 +31,7 @@ const store = createStore({
           path: "/page4",
           label: "견고성",
           sideMenuItems: [],
-        },
+        }
       ],
     };
   },

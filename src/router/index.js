@@ -12,7 +12,7 @@ const routes = [
     path: page.path,
     name: page.label,
     component: () => import(`@/views${page.path}.vue`),
-  })),
+  }))
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

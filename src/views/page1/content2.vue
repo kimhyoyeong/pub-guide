@@ -1,19 +1,21 @@
 <template>
-  <div class="q-pa-md items-start">
+  <div>
     <!-- title-link -->
-    <h2 id="content1" class="text-h5 q-py-lg q-mb-none">1. 문법 준수</h2>
+    <h2 id="content2" class="text-h5 q-py-lg q-mb-none">
+      2. 멀티미디어 대체 수단
+    </h2>
     <!-- //title-link -->
     <!-- card -->
     <q-card flat bordered class="my-card q-mb-lg">
       <q-card-section>
-        <h3 class="text-h6">1-1. 마크업 오류 방지</h3>
+        <h3 class="text-h6 q-mb-none">2-1. 자막 제공</h3>
         <div class="absolute-right q-pa-xs">
           <q-chip dense color="dark" text-color="white"
             ><q-icon name="done" />퍼블</q-chip
           >
         </div>
         <div class="text-subtitle q-mt-sm">
-          마크업 언어의 요소는 열고 닫음, 중첩 관계및 속성 선언에 오류가 없어야 한다.
+          멀티미디어 콘텐츠에는 자막, 대본 또는 수어를 제공해야 한다.
         </div>
       </q-card-section>
       <q-separator />
@@ -57,15 +59,8 @@
   </div>
 </template>
 
-<script setup>
-import { useStore } from "vuex";
-
-const store = useStore();
-
-const sideMenuItems = [
-  { label: "문법 준수", id: "content1" },
-  { label: "웹 애플리케이션 접근성", id: "content2" },
-];
-
-store.commit("setSideMenuItems", sideMenuItems);
+<script>
+export default {
+  name: "content2",
+};
 </script>

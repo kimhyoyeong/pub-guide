@@ -5,7 +5,9 @@
         <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
         <q-toolbar-title
-          ><router-link to="/">웹접근성 가이드 v1.0</router-link></q-toolbar-title
+          ><router-link to="/"
+            >웹접근성 가이드 v1.0</router-link
+          ></q-toolbar-title
         >
       </q-toolbar>
 
@@ -117,22 +119,10 @@ a {
     }
   }
   [class^="text-"] {
-    font-weight: 500;
     line-height: 1.45;
     &:first-child {
       margin-top: 0;
     }
-  }
-  .text-h2 {
-    font-size: 22px;
-    color: $color;
-  }
-  .text-h3 {
-    font-size: 20px;
-    font-weight: 700;
-  }
-  .text-h4 {
-    font-size: 18px;
   }
 }
 .q-page-container {
@@ -148,5 +138,8 @@ aside.q-drawer {
 }
 body.q-body--prevent-scroll {
   position: relative !important;
+}
+code {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
 }
 </style>

@@ -11,22 +11,38 @@
  4. `npm run build` 배포 
 
 ## 사용 방법
-### 작업 예시
+### 작업 페이지
 views/page1.vue
 ```html
-<q-card id="page1-1" flat bordered class="my-card q-mt-md">
-    ...
-</q-card>
+<!-- title-link -->
+<h2 id="content1" class="text-h5 q-py-lg q-mb-none">1. 대체 텍스트</h2>
+<!-- //title-link -->
 ```
 ```js
 const sideMenuItems = [
-  { label: "1. 적절한 대체 텍스트 제공", id: "page1-1" },
+  { label: "1. 대체 텍스트", id: "content1" },
   ...
 ];
 ```
-id="page1-1" / id: "page1-1"
+id="content1" / id: "content1"
 id값 매칭해야 사이드 메뉴와 연동
 
+
+### 코드 뷰어
+```html
+<VCodeBlock
+  code='<q-img
+  src="images/@test.png"
+  :ratio="16 / 9"
+  fit="contain"
+  class="bg-grey-2"
+>
+<div class="absolute-top-right bg-primary">준수 사례</div>'
+  highlightjs
+  lang="html"
+  theme="panda-syntax-light"
+/>
+```
 
 ### public 이미지 경로
 images/@test.png
@@ -35,3 +51,4 @@ images/@test.png
 ## 참고 문서
 - [Vue 3](https://ko.vuejs.org/guide/introduction)
 - [quasar](https://quasar.dev/components)
+- [vue-code-block](https://webdevnerdstuff.github.io/vue-code-block/#home)

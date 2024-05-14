@@ -1,5 +1,5 @@
 {
-  "name": "pub-guide",
+  "name": "cnx-a11y",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.16.11",
+    "@wdns/vue-code-block": "^2.3.2",
     "core-js": "^3.8.3",
     "quasar": "^2.15.4",
     "vue": "^3.2.13",

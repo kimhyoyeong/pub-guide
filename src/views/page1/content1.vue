@@ -1,10 +1,10 @@
 <template>
-  <div class="q-pa-md items-start">
+  <div>
     <!-- title-link -->
-    <h2 id="content1" class="text-h5 q-py-lg q-mb-none">1. 입력 장치 접근성</h2>
+    <h2 id="content1" class="text-h5 q-py-lg q-mb-none">1. 대체 텍스트</h2>
     <!-- //title-link -->
-   <!-- card -->
-   <q-card flat bordered class="my-card q-mb-lg">
+    <!-- card -->
+    <q-card flat bordered class="my-card q-mb-lg">
       <q-card-section>
         <h3 class="text-h6">1-1. 적절한 대체 텍스트 제공</h3>
         <div class="absolute-right q-pa-xs">
@@ -72,18 +72,8 @@
   </div>
 </template>
 
-<script setup>
-import { useStore } from "vuex";
-
-const store = useStore();
-
-const sideMenuItems = [
-  { label: "입력 장치 접근성", id: "content1" },
-  { label: "충분한 시간 제공", id: "content2" },
-  { label: "광 과민성 발작 예방", id: "content3" },
-  { label: "쉬운 내비게이션", id: "content4" },
-  { label: "입력 방식", id: "content5" },
-];
-
-store.commit("setSideMenuItems", sideMenuItems);
+<script>
+export default {
+  name: "content1",
+};
 </script>
